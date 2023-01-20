@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>ADMIN PAGE</title>
+    </h:head>
+    <h:body>
+
+        <div>ADMIN PAGE</div>
+        <h:form>    
+            <h:commandButton class="but" id="send" type="Send" value="Send" action="#{AdminBean.getAllUsers()}" title="Register User"/>
+        </h:form> 
+
+        <h:outputLabel id ="welcome" class="title" value="#{AdminBean.name}"  />
+
+        <h:form>
+            <h:dataTable value = "#{AdminBean.disUsers}" var = "employee"
+            styleClass = "employeeTable"
+            headerClass = "employeeTableHeader"
+            rowClasses = "employeeTableOddRow,employeeTableEvenRow">
+            
+            <h:column>    				
+               <f:facet name = "header">ID</f:facet>    				
+               #{AdminBean.id}
+            </h:column>
+            
+            <h:column>
+               <f:facet name = "header">NAME</f:facet>
+               #{AdminBean.name}
+            </h:column>
+            
+            <h:column>
+               <f:facet name = "header">SURNAME</f:facet>
+               #{AdminBean.surname}
+            </h:column>
+            
+            <h:column>
+               <f:facet name = "header">BALANCE</f:facet>
+               #{AdminBean.balance}
+            </h:column>
+         </h:dataTable>
+      </h:form>
+ </h:body>
+</html>
+
