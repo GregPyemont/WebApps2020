@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Coursework Main Page</title>
+    </h:head>
+     <style type="text/css">
+        body{
+            text-align: center;
+        }
+        .log{
+            font-size: 30px
+        }
+        .reg{
+             font-size: 20px
+        }
+        </style>
+    <h:body>
+        <h:link class = "log" value="Login Page" outcome="user"/>
+        <br/>
+        ...or register<br/> <h:link class = "reg" value="here" outcome="registration"/>
+<br/>
+          <h:form>
+            Logout: <h:commandButton value="Logout" action="#{loginBean.logout()}"/>
+        </h:form>
+   
+    </h:body>
+</html>

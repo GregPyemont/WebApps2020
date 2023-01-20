@@ -1,0 +1,14 @@
+com\grwp20\WebCoursework\jsf\LoginBean.class
+com\grwp20\WebCoursework\ejb\DisplayUser.class
+com\grwp20\WebCoursework\jsf\UserPageBean.class
+com\grwp20\WebCoursework\entity\TransactionRecords_.class
+com\grwp20\WebCoursework\entity\SystemUser.class
+com\grwp20\WebCoursework\entity\SystemUserGroup.class
+com\grwp20\WebCoursework\ejb\DbInit.class
+com\grwp20\WebCoursework\entity\SystemUser_.class
+com\grwp20\WebCoursework\jsf\AdminPageBean.class
+com\grwp20\WebCoursework\entity\TransactionRecords.class
+com\grwp20\WebCoursework\ejb\UserService.class
+com\grwp20\WebCoursework\entity\SystemUserGroup_.class
+com\grwp20\WebCoursework\jsf\RegistrationBean.class
+com\grwp20\WebCoursework\ejb\AdminService.class

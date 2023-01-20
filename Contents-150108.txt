@@ -1,0 +1,40 @@
+WEBAPPS COURSEWORK -2020- 150108
+
+--WEBAPPS NETBEANS PROJECT --
+	-- 4 EJBS -- 
+		-AdminServive.java
+			-EJB for admin only methods
+		-DbInit.java
+			-database startup, admin creation
+		-DisplayUser.java
+			-admin page table 
+		-UserService.java
+			-EJB for user methods
+	-- 3 ENTITIES --
+		-SystemUser.java
+			-user account infomration
+		-SysyemUserGroup.java
+			-user secuity clearence
+		-TransactionRecords.java
+			-transaction records
+	-- 4 JSF --
+		-AdminPageBean.java
+			-admin page jsf
+		-LoginBean.java
+			-login method
+		-RegistrationBean.java
+			-registration method
+		-UserPageBean.java
+			-user page jsf
+	-- WEBPAGES --
+		-registration
+		-login
+		-index
+		-error
+		-user
+		-admin
+	-- OTHERS --
+		-web.xml pom, persistence.xml etc
+
+
+--WEBAPPS REPORT PDF--

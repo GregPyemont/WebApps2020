@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Security Example</title>
+    </h:head>
+    <script>
+        function myFunction() {
+                  
+                   //localStorage.setItem("userEntry", document.getElementById("userInput").value);
+                  /// localStorage.setItem("lastname", "Smith");
+                  var input = document.getElementById('userInput').value;
+                    localStorage.setItem('userEntry', input);
+                }
+                
+               </script>
+    <style type="text/css">
+        body{
+            text-align: center;
+        }
+        .usern{
+            
+        }
+        
+    </style>
+    <h:body>
+        <h2>Hello, please log in:</h2>
+        <form  action="j_security_check" name="loginForm">
+            Email: <br/>
+            <input id = "userInput" class = "usern" type="text" name="j_username" size="30" 
+                   />
+            <br/>
+            Password: 
+            <br/>
+            <input  class = "pass" type="password" name="j_password" size="30"/>
+            <br/>
+            <button  onmouseover="myFunction()" id="subBut" value="Submit" type="submit">Submit
+             
+            </button>
+            <button value="Reset" type="reset">Reset</button>
+        </form>
+    </h:body>
+</html>

@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>ok</title>
+    </h:head>
+    
+    <style type="text/css">
+        body{
+            text-align: center;
+        }  
+        .title{
+            font-size: 30px;
+            padding: 10px;
+        }
+        .balance{
+            font-size: 30px;
+        }
+        .amount{
+            font-size: 15px;
+        }
+        .butsend{
+            font-size: 15px;
+        }
+        .butrec{
+            font-size: 15px;
+        }
+        .amountbox{
+            padding: 4px;
+            
+        }
+        .amount{
+            margin: 10px;
+            border: 10px;
+        }
+        .but{
+            padding: 7px;
+            margin: 10px
+        }
+    </style>
+     
+     
+    <h:body>
+        <div class="access" onmouseover=""></div>
+         <div class="main">
+        
+        <h:outputLabel id ="welcome" class="title" value="#{Bean.getFLName()}"  />
+        <br/>
+        <br/>
+        <h:outputLabel class="balance" value="You're Balance is:"/>       
+        <br/>
+        <h:outputLabel class="balance" value="#{Bean.getBalance()}"/>
+        <h:form>
+            <br/>
+            <h:outputLabel class="amount" for="email" value="Email of Sender/Receiver:"/>
+            <br/>
+            <h:inputText class="amountbox" id ="email" value="#{Bean.sendEmail}" title="Enter Amount" required="true" requiredMessage="Mandatory Field"/>
+            <br/>
+            <h:outputLabel class="amount" for="amount" value="Amount to Send/Receive:"/>
+            <br/>
+            <h:inputText class="amountbox" id ="amount" value="#{Bean.amount}" title="Enter Amount" required="true" requiredMessage="Mandatory Field"/>
+            <br/>
+            
+            <h:commandButton class="but" id="send" type="Send" value="Send" action="#{Bean.reqSendTransaction()}" title="Register User"/>
+            <h:commandButton class="but" id="rec" type="rec" value="Receive" title="rec" action="#{Bean.reqRecTransaction()}"/>            
+        </h:form>
+         <br/>
+         <br/>
+         <h:outputLabel class="confirm" value="#{Bean.message}"/>
+        <br/>
+        <h:link value="Back to login" outcome="index"/>
+         <br/>
+        <h:outputText value=""/>
+        <h:link value="Admin Page" outcome="/admin/admin.xhtml" />
+      
+        </div>
+    </h:body>
+</html>
+
